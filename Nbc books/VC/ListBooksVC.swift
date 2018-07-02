@@ -67,6 +67,10 @@ class ListBooksVC: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(PageVC(), animated: true)
+    }
+    
     func fetchData() {
         let ws = WSListBooks()
         ws.request(success: { (d) in
