@@ -1,5 +1,5 @@
 //
-//  Book.swift
+//  Author.swift
 //  Nbc books
 //
 //  Created by Chum Ratha on 7/1/18.
@@ -9,11 +9,10 @@
 import UIKit
 
 class Book: BaseModel {
-    
-    var name:String!
-    var referenceId:Int!
-    var referenceTable:Int!
-    var url:String!
-    var type:String!
-    var page:Int!
+    var title:String!
+    var desc:String!
+    var author:String!
+    var publishedDate:Date!
+    var active:Bool!
+    var pages:[BookPage] = []
 }
