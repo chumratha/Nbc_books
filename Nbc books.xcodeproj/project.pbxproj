@@ -123,6 +123,7 @@
 		597A7B3520EA7C2200F8EC42 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
 		597A7B3620EA7C2200F8EC42 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		597A7B3720EA7C2200F8EC42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		597A7B3B20EA7ECB00F8EC42 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		59D1C42720E928A80036EC4C /* Nbc books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nbc books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D1C42A20E928A80036EC4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D1C42C20E928A80036EC4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +264,7 @@
 		59D1C41E20E928A80036EC4C = {
 			isa = PBXGroup;
 			children = (
+				597A7B3B20EA7ECB00F8EC42 /* BridgeHeader.h */,
 				59D1C42920E928A80036EC4C /* Nbc books */,
 				59D1C42820E928A80036EC4C /* Products */,
 			);
@@ -567,6 +569,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.restpos.Nbc-books";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BridgeHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -585,6 +588,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.restpos.Nbc-books";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BridgeHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

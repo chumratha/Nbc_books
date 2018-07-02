@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 class ListBooksVC: UICollectionViewController {
     
     let flowlayout = UICollectionViewFlowLayout()
+    var listBook :[Book] = []
     
     init() {
         super.init(collectionViewLayout: flowlayout)
@@ -49,21 +50,30 @@ class ListBooksVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        return listBook.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .blue
         // Configure the cell
-    
+        let book = listBook[indexPath.row]
+        let imageV = UIImageView(frame: CGRect(x: 0, y: 0, width: flowlayout.itemSize.width, height: flowlayout.itemSize.height))
+        if book.pages.count > 0 {
+            imageV.contentMode = .scaleAspectFit
+            let url = book.pages[0].url
+            imageV.sd_setImage(with: URL(string: url!)!, completed: nil)
+        }
+        cell.addSubview(imageV)
         return cell
     }
     
     func fetchData() {
         let ws = WSListBooks()
         ws.request(success: { (d) in
-            print(d)
+            self.listBook = d as! [Book]
+            DispatchQueue.main.async {
+                self.collectionView?.reloadData()
+            }
         }) { (error) in
             
         }
