@@ -10,10 +10,15 @@ import UIKit
 
 class BookPage: BaseModel {
     
+    enum PageType:String {
+        case COVER
+        case PAGE
+    }
+    
     var name:String!
     var referenceId:Int!
     var referenceTable:Int!
     var url:String!
-    var type:String!
+    var type:PageType!
     var page:Int!
 }

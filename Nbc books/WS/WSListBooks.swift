@@ -27,6 +27,12 @@ class WSListBooks: WSBase {
                 
                 for var page in book["attachments"] as! [[String:Any]]{
                     let p = BookPage()
+                    p.id = page["id"] as? Int
+                    p.name = page["name"] as? String
+                    p.url = page["url"] as? String
+                    p.type = BookPage.PageType(rawValue: page["type"] as! String)
+                    p.page = page["page"] as! Int
+                    b.pages.append(p)
                 }
             }
         }
