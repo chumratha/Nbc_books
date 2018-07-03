@@ -41,6 +41,7 @@ class ListBooksVC: UICollectionViewController {
         flowlayout.itemSize = CGSize(width: (frame.size.width - space*5) / 3 , height: frame.size.height * 0.25)
         collectionView?.backgroundColor = .white
         collectionView?.contentInset = UIEdgeInsetsMake(5, 10, 10, 10)
+        collectionView?.backgroundView = UIImageView(image: UIImage(named: "bg")!)
     }
     
     override func didReceiveMemoryWarning() {
