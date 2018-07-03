@@ -10,7 +10,8 @@ import UIKit
 
 class ContentVC: UIViewController {
     
-    var imageUrl: String? = nil
+    var imageUrl: String!
+    var pageIndex: Int = 1
     
     override func viewWillAppear(_ animated: Bool) {
         let cgRect = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
@@ -23,6 +24,14 @@ class ContentVC: UIViewController {
             loadImage(_url, imageView: imageView)
         }
         self.view.addSubview(imageView)
+        
+        let textView = UITextView(frame: CGRect(x: self.view.frame.size.width - 80, y: imageView.frame.height - 180, width: 80.0, height: 40.0))
+        
+        textView.font = .systemFont(ofSize: 18)
+        textView.text = "Page " + "\(pageIndex)"
+        textView.textColor = UIColor.white
+        textView.backgroundColor = UIColor.red
+        self.view.addSubview(textView)
     }
 
     override func viewDidLoad() {

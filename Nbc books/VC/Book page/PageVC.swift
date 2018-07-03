@@ -30,9 +30,10 @@ class PageVC: UIViewController , UIPageViewControllerDataSource , UIPageViewCont
         pageController.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         
         let books = book.pages
-        for item in books {
+        for (index, element) in books.enumerated() {
             let vc = ContentVC()
-            vc.imageUrl = item.url
+            vc.imageUrl = element.url
+            vc.pageIndex = index + 1
             controllers.append(vc)
         }
         // set first view for display
