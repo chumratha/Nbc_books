@@ -39,6 +39,7 @@ class PageVC: UIViewController , UIPageViewControllerDataSource , UIPageViewCont
         // set first view for display
         pageController.setViewControllers([controllers[0]], direction: .forward, animated: false)
         // Do any additional setup after loading the view.
+        view.backgroundColor = .white
     }
 
     override func didReceiveMemoryWarning() {

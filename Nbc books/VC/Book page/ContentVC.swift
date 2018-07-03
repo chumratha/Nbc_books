@@ -32,6 +32,7 @@ class ContentVC: UIViewController {
         textView.textColor = UIColor.white
         textView.backgroundColor = UIColor.red
         self.view.addSubview(textView)
+        view.backgroundColor = .white
     }
 
     override func viewDidLoad() {
