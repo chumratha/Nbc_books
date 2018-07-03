@@ -12,6 +12,7 @@ class PageVC: UIViewController , UIPageViewControllerDataSource , UIPageViewCont
 
     var pageController: UIPageViewController!
     var controllers = [ContentVC]()
+    var book: Book! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,12 @@ class PageVC: UIViewController , UIPageViewControllerDataSource , UIPageViewCont
 //        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[pageController]|", options: [], metrics: nil, views: views))
 //        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[pageController]|", options: [], metrics: nil, views: views))
         
-        pageController.view.frame = CGRect(x: 0, y: 64, width: self.view.frame.size.width, height: self.view.frame.size.height - 64)
+        pageController.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         
-        for _ in 1 ... 5 {
+        let books = book.pages
+        for item in books {
             let vc = ContentVC()
-            vc.view.backgroundColor = randomColor()
+            vc.imageUrl = item.url
             controllers.append(vc)
         }
         // set first view for display

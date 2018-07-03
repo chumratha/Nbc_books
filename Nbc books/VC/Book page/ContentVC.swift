@@ -9,6 +9,21 @@
 import UIKit
 
 class ContentVC: UIViewController {
+    
+    var imageUrl: String? = nil
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let cgRect = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        let imageView = UIImageView(frame: cgRect)
+        imageView.contentMode = .scaleAspectFit
+        
+        let url = URL(string : imageUrl!)
+        imageView.contentMode = .scaleAspectFit
+        if let _url = url {
+            loadImage(_url, imageView: imageView)
+        }
+        self.view.addSubview(imageView)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +34,24 @@ class ContentVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadImage(_ url: URL, imageView : UIImageView) {
+        print("Download Started")
+        getDataFromUrl(url: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() {
+                imageView.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            completion(data, response, error)
+            }.resume()
     }
     
 

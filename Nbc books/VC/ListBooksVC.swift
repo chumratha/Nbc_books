@@ -68,7 +68,9 @@ class ListBooksVC: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(PageVC(), animated: true)
+        let pageVC = PageVC()
+        pageVC.book = listBook[indexPath.row]
+        navigationController?.pushViewController(pageVC, animated: true)
     }
     
     func fetchData() {
