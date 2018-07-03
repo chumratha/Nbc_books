@@ -14,6 +14,7 @@ class WSBase: NSObject , URLSessionDelegate {
     
     var data:[String:Any]?
     var params:[String]? // exaple api/id/name/sex
+    var cache:[String:Any] = [:]
     
     func method() -> String {
         return "GET"
@@ -23,7 +24,20 @@ class WSBase: NSObject , URLSessionDelegate {
         return ""
     }
     
+    func isCache() -> Bool {
+        return false
+    }
+    
     private func doRequest(success:((_ id:Any)->Void)? , error:((_ error:String)->Void)?)  throws {
+        
+        // check cache
+        if isCache() {
+            if let decoded = UserDefaults.standard.value(forKey: self.suffix()) as? Data {
+                let data = NSKeyedUnarchiver.unarchiveObject(with: decoded) as Any
+                success!(self.parseData(data: data))
+                return
+            }
+        }
         
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
@@ -62,6 +76,10 @@ class WSBase: NSObject , URLSessionDelegate {
             else{
                 do{
                     let resultData = try JSONSerialization.jsonObject(with: d!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                    if self.isCache() {
+                        let encodedData = NSKeyedArchiver.archivedData(withRootObject: resultData)
+                        UserDefaults.standard.set(encodedData, forKey: self.suffix())
+                    }
                     success!(self.parseData(data: resultData))
                 }
                 catch let e as NSError {

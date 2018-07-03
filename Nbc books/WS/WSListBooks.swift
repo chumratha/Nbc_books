@@ -14,6 +14,10 @@ class WSListBooks: WSBase {
         return "books?page=\(page)"
     }
     
+    override func isCache() -> Bool {
+        return true
+    }
+    
     override func parseData(data: Any) -> Any {
         var listBook:[Book] = []
         if let responseData = data as? [String:Any] , (responseData["success"] as! Int) == 1 {

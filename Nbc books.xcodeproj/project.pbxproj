@@ -45,6 +45,12 @@
 		597A7B3A20EA7C2200F8EC42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 597A7B3720EA7C2200F8EC42 /* Info.plist */; };
 		597A7B3E20EA8A2F00F8EC42 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A7B3D20EA8A2F00F8EC42 /* PageVC.swift */; };
 		597A7B4120EA91B300F8EC42 /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A7B4020EA91B300F8EC42 /* ContentVC.swift */; };
+		59C9798C20EBDCE80071FDF8 /* DbBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C9798B20EBDCE80071FDF8 /* DbBase.swift */; };
+		59C9799920EBDEA70071FDF8 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9798F20EBDEA60071FDF8 /* FMDatabase.m */; };
+		59C9799A20EBDEA70071FDF8 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9799020EBDEA60071FDF8 /* FMDatabaseAdditions.m */; };
+		59C9799B20EBDEA70071FDF8 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9799120EBDEA60071FDF8 /* FMResultSet.m */; };
+		59C9799C20EBDEA70071FDF8 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9799320EBDEA60071FDF8 /* FMDatabaseQueue.m */; };
+		59C9799D20EBDEA70071FDF8 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9799820EBDEA70071FDF8 /* FMDatabasePool.m */; };
 		59D1C42B20E928A80036EC4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D1C42A20E928A80036EC4C /* AppDelegate.swift */; };
 		59D1C42D20E928A80036EC4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D1C42C20E928A80036EC4C /* ViewController.swift */; };
 		59D1C43220E928AA0036EC4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D1C43120E928AA0036EC4C /* Assets.xcassets */; };
@@ -128,6 +134,18 @@
 		597A7B3B20EA7ECB00F8EC42 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		597A7B3D20EA8A2F00F8EC42 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		597A7B4020EA91B300F8EC42 /* ContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
+		59C9798B20EBDCE80071FDF8 /* DbBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbBase.swift; sourceTree = "<group>"; };
+		59C9798E20EBDEA60071FDF8 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		59C9798F20EBDEA60071FDF8 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		59C9799020EBDEA60071FDF8 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		59C9799120EBDEA60071FDF8 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		59C9799220EBDEA60071FDF8 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		59C9799320EBDEA60071FDF8 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		59C9799420EBDEA60071FDF8 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		59C9799520EBDEA60071FDF8 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		59C9799620EBDEA60071FDF8 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		59C9799720EBDEA60071FDF8 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		59C9799820EBDEA70071FDF8 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		59D1C42720E928A80036EC4C /* Nbc books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nbc books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D1C42A20E928A80036EC4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D1C42C20E928A80036EC4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +189,7 @@
 		597A7AD020EA7A5500F8EC42 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				59C9798D20EBDE950071FDF8 /* FMDB */,
 				597A7B3220EA7C2200F8EC42 /* FLAnimatedImage */,
 				597A7AD120EA7A6700F8EC42 /* SDWebImage */,
 			);
@@ -274,6 +293,32 @@
 			path = "Book page";
 			sourceTree = "<group>";
 		};
+		59C9798A20EBDC0A0071FDF8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				59C9798B20EBDCE80071FDF8 /* DbBase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		59C9798D20EBDE950071FDF8 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				59C9798E20EBDEA60071FDF8 /* FMDatabase.h */,
+				59C9798F20EBDEA60071FDF8 /* FMDatabase.m */,
+				59C9799220EBDEA60071FDF8 /* FMDatabaseAdditions.h */,
+				59C9799020EBDEA60071FDF8 /* FMDatabaseAdditions.m */,
+				59C9799420EBDEA60071FDF8 /* FMDatabasePool.h */,
+				59C9799820EBDEA70071FDF8 /* FMDatabasePool.m */,
+				59C9799520EBDEA60071FDF8 /* FMDatabaseQueue.h */,
+				59C9799320EBDEA60071FDF8 /* FMDatabaseQueue.m */,
+				59C9799620EBDEA60071FDF8 /* FMDB.h */,
+				59C9799720EBDEA60071FDF8 /* FMResultSet.h */,
+				59C9799120EBDEA60071FDF8 /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
 		59D1C41E20E928A80036EC4C = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +339,7 @@
 		59D1C42920E928A80036EC4C /* Nbc books */ = {
 			isa = PBXGroup;
 			children = (
+				59C9798A20EBDC0A0071FDF8 /* Database */,
 				597A7AD020EA7A5500F8EC42 /* Third Party */,
 				597A7ACD20EA726800F8EC42 /* Utils */,
 				597A7AC820EA6E4100F8EC42 /* WS */,
@@ -401,12 +447,15 @@
 				597A7ACC20EA6F7A00F8EC42 /* WSListBooks.swift in Sources */,
 				597A7B1420EA7A6700F8EC42 /* SDWebImageFrame.m in Sources */,
 				597A7B1120EA7A6700F8EC42 /* MKAnnotationView+WebCache.m in Sources */,
+				59C9799920EBDEA70071FDF8 /* FMDatabase.m in Sources */,
 				59D1C42D20E928A80036EC4C /* ViewController.swift in Sources */,
 				597A7B1720EA7A6700F8EC42 /* FLAnimatedImageView+WebCache.m in Sources */,
 				597A7B2820EA7A6700F8EC42 /* SDImageCacheConfig.m in Sources */,
 				597A7B1F20EA7A6700F8EC42 /* NSButton+WebCache.m in Sources */,
 				59D1C42B20E928A80036EC4C /* AppDelegate.swift in Sources */,
 				597A7ACF20EA727A00F8EC42 /* TimeUtils.swift in Sources */,
+				59C9799B20EBDEA70071FDF8 /* FMResultSet.m in Sources */,
+				59C9799D20EBDEA70071FDF8 /* FMDatabasePool.m in Sources */,
 				59D1C44720E935BA0036EC4C /* BookPage.swift in Sources */,
 				597A7B2020EA7A6700F8EC42 /* SDAnimatedImageRep.m in Sources */,
 				597A7B2420EA7A6700F8EC42 /* NSData+ImageContentType.m in Sources */,
@@ -426,15 +475,18 @@
 				597A7B1A20EA7A6700F8EC42 /* UIImage+MultiFormat.m in Sources */,
 				597A7B2220EA7A6700F8EC42 /* SDWebImageDownloaderOperation.m in Sources */,
 				597A7B1D20EA7A6700F8EC42 /* SDWebImagePrefetcher.m in Sources */,
+				59C9798C20EBDCE80071FDF8 /* DbBase.swift in Sources */,
 				597A7B2B20EA7A6700F8EC42 /* SDWebImageImageIOCoder.m in Sources */,
 				597A7B4120EA91B300F8EC42 /* ContentVC.swift in Sources */,
 				597A7B1B20EA7A6700F8EC42 /* SDWebImageCoderHelper.m in Sources */,
+				59C9799A20EBDEA70071FDF8 /* FMDatabaseAdditions.m in Sources */,
 				597A7B3920EA7C2200F8EC42 /* FLAnimatedImageView.m in Sources */,
 				597A7B3E20EA8A2F00F8EC42 /* PageVC.swift in Sources */,
 				597A7B1020EA7A6700F8EC42 /* UIImage+WebP.m in Sources */,
 				597A7B1220EA7A6700F8EC42 /* SDWebImageManager.m in Sources */,
 				597A7B2C20EA7A6700F8EC42 /* UIButton+WebCache.m in Sources */,
 				597A7B2720EA7A6700F8EC42 /* SDWebImageGIFCoder.m in Sources */,
+				59C9799C20EBDEA70071FDF8 /* FMDatabaseQueue.m in Sources */,
 				597A7B2D20EA7A6700F8EC42 /* SDWebImageWebPCoder.m in Sources */,
 				59D1C44320E92B390036EC4C /* BaseModel.swift in Sources */,
 				59D1C44520E933B40036EC4C /* Book.swift in Sources */,
