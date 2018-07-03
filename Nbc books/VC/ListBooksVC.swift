@@ -38,9 +38,12 @@ class ListBooksVC: UICollectionViewController {
         flowlayout.scrollDirection = .vertical
         flowlayout.minimumLineSpacing = 10
         let space:CGFloat = 10
-        flowlayout.itemSize = CGSize(width: (frame.size.width - space*5) / 3 , height: frame.size.height * 0.25)
-        collectionView?.backgroundColor = .white
+        flowlayout.itemSize = CGSize(width: (frame.size.width - space*5) / 3 , height: frame.size.height * 0.20)
+        collectionView?.backgroundColor = UIColor(patternImage: UIImage (named: "bg.png")!)
+//        collectionView?.backgroundColor = UIColor.white
+
         collectionView?.contentInset = UIEdgeInsetsMake(5, 10, 10, 10)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,6 +66,7 @@ class ListBooksVC: UICollectionViewController {
             let url = book.pages[0].url
             imageV.sd_setImage(with: URL(string: url!)!, completed: nil)
         }
+        imageV.backgroundColor = UIColor.white
         cell.addSubview(imageV)
         return cell
     }
